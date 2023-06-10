@@ -276,22 +276,18 @@ div,
 */
 
 .header-row__1 {
-  --after-width: calc(52px / var(--resolution));
-  --before-width: calc(162px / var(--resolution));
-  --font-size: calc(12px / var(--resolution));
   --height: calc(28px / var(--resolution));
-  --text-after: calc(85px / var(--resolution));
   height: var(--height);
 }
 
 .header-row__1::before {
   background-image: url(./img/spreadsheet/slc_01.png);
-  width: var(--before-width);
+  width: calc(162px / var(--resolution));
 }
 
 .header-row__1::after {
   background-image: url(./img/spreadsheet/slc_06.png);
-  width: var(--after-width);
+  width: calc(52px / var(--resolution));
 }
 
 .header-title {
@@ -308,14 +304,14 @@ div,
 .header-title::after {
   background-image: url(./img/spreadsheet/slc_04.png);
   height: var(--height);
-  width: var(--text-after);
+  width: calc(85px / var(--resolution));
 }
 
 
 .header-title__text {
   display: inline-block;
   color: #666;
-  font-size: var(--font-size);
+  font-size: calc(12px / var(--resolution));
   font-weight: 400;
   padding: 3px 4px 0 0;
   text-shadow: 1px 1px 0 rgba(0,0,0,.15);
