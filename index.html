@@ -1,21 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="main.css" rel="stylesheet" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header-row__1 flex pseudos">
-        <h1 class="header-title after bg-repeat__x flex">
-          <span class="header-title__text">
-            Aprenda excel usando excel
-          </span>
+
+<head>
+  <title>Aprenda excel usando excel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link href="main.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="header after">
+    <div class="header-row__1 flex">
+      <span class="header-title before flex" data-label="Aprenda excel usando excel"></span>
+    </div>
+    <div class="header-row__2"></div>
+    <div class="header-row__3 flex pseudos"></div>
+  </div>
+  <main class="main after flex">
+    <article class="content">
+      <excel-grid>
+        <h1 class="title" slot="title">
+          <div class="title-line__1">
+            <span class="title-intro__1">Aprenda</span>
+            <span class="title-wordart__1 wordart">Excel</span>
+          </div>
+          <div class="title-line__2">
+            <span class="title-intro__2">
+              <span class="rail">usando</span>
+            </span>
+            <span class="title-wordart__2 wordart">Excel</span>
+          </div>
         </h1>
+      </excel-grid>
+      <div class="clippy-window">
+        <div class="clippy"></div>
       </div>
-    </header>
-    <main class="main"></main>
-    <footer class="footer"></footer>
-  </body>
+    </article>
+  </main>
+  <div class="footer after">
+    <div class="footer-tabs after flex">
+      <div class="footer-tabs__tab" data-label="Aprenda excel usando excel"></div>
+    </div>
+  </div>
+  <template id="excel-grid-title">
+    <slot name="title">content goes here</slot>
+  </template>
+  <script>
+    (function () {
+      'use strict';
+      function updateResolution() {
+        const res = window.devicePixelRatio > 1 ?
+          window.devicePixelRatio : 1;
+        document.querySelector(':root').style.setProperty('--resolution', res);
+      }
+      updateResolution();
+      window.addEventListener('resize', updateResolution);
+    })();
+  </script>
+</body>
+
 </html>

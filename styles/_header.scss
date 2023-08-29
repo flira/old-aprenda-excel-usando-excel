@@ -1,0 +1,131 @@
+.header {
+
+  height: dppx(172);
+  line-height: 0;
+
+  &-row__1 {
+    --height: #{dppx(28)};
+
+    background: {
+      image:
+        get-slice('01'),
+        get-slice('06'),
+        get-slice('02');
+      position-x:
+        0,
+        100%,
+        0;
+      repeat:
+        no-repeat,
+        no-repeat,
+        repeat;
+    }
+
+    height: var(--height);
+    justify-content: center;
+
+    .header-title {
+      align-items: center;
+      background: get-slice('04') no-repeat right 0;
+      background-size: contain;
+      font-size: dppx(12);
+      height: var(--height);
+      line-height: 1;
+      margin: 0;
+      padding-right: dppx(85);
+
+      &::before {
+        color: #666;
+        content: attr(data-label);
+        display: inline-block;
+        font-weight: 400;
+        line-height: var(--height);
+        padding: dppx(3) dppx(4) 0 0;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, .15);
+
+        @media screen and (resolution: 2dppx) {
+          padding-top: 1px;
+        }
+      }
+    }
+  }
+
+  &-row__2 {
+    background: {
+      image:
+        get-slice('07'),
+        get-slice(10),
+        get-slice('08');
+      position:
+        0,
+        100%,
+        0;
+      repeat:
+        no-repeat,
+        no-repeat,
+        repeat;
+    }
+
+    height: dppx(26);
+  }
+
+  &-row__3 {
+    @for $i from 1 through 7 {
+      --bg#{$i}: #{get-slice(10 + $i)};
+    }
+
+    background-image: get-slice(18);
+    background-repeat: repeat;
+    height: dppx(93);
+    justify-content: space-between;
+
+    &::before {
+      background: {
+        image:
+          var(--bg1),
+          var(--bg2),
+          var(--bg3),
+          var(--bg4),
+          var(--bg5),
+          var(--bg6),
+          var(--bg7);
+        position-x:
+          0,
+          dppx(84),
+          dppx(283),
+          dppx(537),
+          dppx(676),
+          dppx(853),
+          dppx(990);
+        repeat: no-repeat;
+      }
+
+      width: dppx(1117);
+    }
+
+    &::after {
+      background-image: get-slice(20);
+      width: dppx(9);
+    }
+  }
+
+  &::after {
+    background: {
+      image:
+        get-slice(21),
+        get-slice(24),
+        get-slice(22);
+      position-x:
+        0,
+        100%,
+        0;
+      repeat:
+        no-repeat,
+        no-repeat,
+        repeat;
+
+    }
+
+    height: dppx(25);
+  }
+}

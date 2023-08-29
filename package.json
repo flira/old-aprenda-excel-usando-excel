@@ -1,0 +1,31 @@
+{
+  "name": "aprenda-excel-usando-excel",
+  "version": "1.0.0",
+  "description": "Homepage to download a tutorial teaching microsoft excel using an excel file",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "minify main.css > main.min.css",
+    "start": "concurrently --kill-others --names \"STATIC_FILES,SERVER\", -c \"#cf649a,#5fa04e\" \"node index.js\" \"budo --wg **/*.{html,css,js} --live\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "AGPL-3.0-or-later"
+  },
+  "keywords": [
+    "HTML",
+    "Oldschool",
+    "90s"
+  ],
+  "author": "Fernando Lira",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "argparse": "^2.0.1",
+    "budo": "^11.8.4",
+    "concurrently": "^8.2.0",
+    "minify": "^10.3.0",
+    "sass": "^1.66.0",
+    "watch": "^1.0.2"
+  }
+}

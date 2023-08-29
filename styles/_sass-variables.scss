@@ -1,0 +1,7 @@
+@function dppx($px) {
+  @return calc(#{$px}px / var(--resolution));
+}
+
+@function get-slice($slice-number) {
+  @return url('./img/spreadsheet/new-slices/slc_'+ $slice-number + '.png');
+}

@@ -1,0 +1,52 @@
+:root {
+  --resolution: 1;
+
+  $resolutions: 1.5, 2, 2.5, 3, 3.5, 4;
+  @each $resolution in $resolutions {
+    @media screen and (resolution: #{$resolution}dppx) {
+      --resolution: #{$resolution};
+    }
+  }
+}
+
+html {
+  font: 100%/1.3 normal normal arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  height: 100vh;
+  overflow: hidden;
+}
+
+div,
+%no-repeat {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+}
+
+.after::after,
+.before::before,
+.pseudos::after,
+.pseudos::before {
+  content: '';
+  display: inline-block;
+  @extend %no-repeat;
+}
+
+.flex {
+  display: flex;
+}
+
+.bg-repeat {
+  &__x {
+    background-repeat: repeat-x;
+  }
+
+  &__y {
+    background-repeat: repeat-y;
+  }
+}

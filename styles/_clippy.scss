@@ -1,0 +1,21 @@
+.clippy {
+  background-image: url(img/clippy/animation.gif);
+  height: dppx(224);
+  width: dppx(224);
+
+  &,
+  &-window {
+    background-size: contain;
+  }
+
+  &-window {
+    background-image: url(img/clippy/window.png);
+    bottom: dppx(64);
+    box-sizing: border-box;
+    height: dppx(261);
+    padding: dppx(31) dppx(6) dppx(6);
+    position: fixed;
+    right: dppx(44);
+    width: dppx(236);
+  }
+}

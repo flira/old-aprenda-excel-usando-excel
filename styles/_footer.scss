@@ -1,0 +1,113 @@
+.footer {
+  height: dppx(38);
+  line-height: 0;
+  width: 100%;
+
+  &-tabs {
+    background: {
+      image:
+        get-slice(41),
+        get-slice(46);
+      repeat:
+        no-repeat,
+        repeat;
+    }
+
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding-left: dppx(63);
+
+    &__tab {
+      align-items: center;
+
+      background: {
+        image:
+          get-slice(42),
+          get-slice(45),
+          get-slice(43);
+        repeat:
+          no-repeat,
+          no-repeat,
+          repeat;
+        position:
+          0,
+          right,
+          0;
+      }
+
+      display: inline-block;
+      height: dppx(16);
+      padding: 0 dppx(50) 0 dppx(4);
+      width: auto;
+
+      &::before {
+        color: #1a4992;
+        content: attr(data-label);
+        display: inline-block;
+
+        font: {
+          size: dppx(12);
+          weight: 700;
+        }
+
+        line-height: 1;
+        padding: 0 dppx(4);
+        vertical-align: top;
+      }
+    }
+
+    &::after {
+      background: {
+        image:
+          get-slice(48),
+          get-slice(49),
+          get-slice(50),
+          get-slice(53),
+          get-slice(55),
+          get-slice(58),
+          get-slice(59),
+          get-slice(51);
+        repeat:
+          no-repeat,
+          no-repeat,
+          no-repeat,
+          no-repeat,
+          no-repeat,
+          no-repeat,
+          no-repeat,
+          repeat;
+        position-x:
+          0,
+          dppx(6),
+          dppx(22),
+          calc(50% - (8px / var(--resolution))),
+          calc(100% - (41px / var(--resolution))),
+          calc(100% - (19px / var(--resolution))),
+          100%,
+          0;
+
+      }
+
+      width: 33vw;
+    }
+  }
+
+  &::after {
+    background: {
+      image:
+        get-slice(60),
+        get-slice(66),
+        get-slice(61);
+      position-x:
+        0,
+        100%,
+        0;
+      repeat:
+        no-repeat,
+        no-repeat,
+        repeat;
+    }
+
+    height: dppx(22);
+  }
+}
